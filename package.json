@@ -10,9 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.4.1",
+    "ffmpeg-static": "^3.0.0",
     "got": "^11.8.2",
     "humanize-duration": "^3.24.0",
     "moment": "^2.29.1",
-    "parse-duration": "^0.4.4"
+    "opusscript": "^0.0.6",
+    "parse-duration": "^0.4.4",
+    "ytdl-core": "^4.9.1"
   }
 }
