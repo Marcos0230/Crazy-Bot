@@ -1,0 +1,18 @@
+{
+  "name": "bot-discord",
+  "version": "1.1.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "🦄𝐋𝐞𝐆𝐚𝐫𝐬𝐅𝐨𝐮🌈#9805",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "got": "^11.8.2",
+    "humanize-duration": "^3.24.0",
+    "moment": "^2.29.1",
+    "parse-duration": "^0.4.4"
+  }
+}
