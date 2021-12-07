@@ -17,7 +17,7 @@ module.exports = {
         .setThumbnail('https://cdn.discordapp.com/attachments/738864387019767921/821457688172167198/Hnet.com-image.gif'))
         client.db.lockedChannels.push(channel.id)
         fs.writeFileSync('./db.json', JSON.stringify(client.db))
-        const memberRole = channel.guild.roles.cache.find(role => role.name === '「👥」Membres')
+        const memberRole = channel.guild.roles.cache.find(role => role.name === 'ᘻЄᘻβƦЄ')
         channel.createOverwrite(memberRole, {
             SEND_MESSAGES: false,
             CONNECT: false,
