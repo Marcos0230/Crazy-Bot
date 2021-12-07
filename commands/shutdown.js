@@ -2,11 +2,11 @@ const Discord = require('discord.js')
  
 module.exports = {
     run: async (message, client) => {
-        if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(new Discord.MessageEmbed()
+        if (message.author.id !== ('588381876989853697')) return message.channel.send(new Discord.MessageEmbed()
         .setDescription('Vous n\'avez pas la permission d\'utiliser cette commande !')
         .setColor('#ff0000')
         .setTimestamp())
-        message.channel.send(new Discord.MessageEmbed()
+        else message.channel.send(new Discord.MessageEmbed()
             .setDescription(`Le bot s'éteint...`)
             .setColor('#00ff00')
             .setTimestamp()),
