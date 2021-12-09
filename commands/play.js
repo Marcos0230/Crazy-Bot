@@ -38,4 +38,4 @@ module.exports = {
         category: 'Musique',
         syntax: '<lien YouTube vers la musique que vous souhaitez écouter>'
     }
-}
+} //une mise à jour va bientôt être faite afin de rajouter une liste d'attente de musique et autres commandes bien utiles pour la catégorie.
