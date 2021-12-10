@@ -60,7 +60,7 @@ function playMusic(connection){
     })
 
     dispatcher.on("error", err => {
-        console.log("Erreur de dispatcher" + err)
+        console.log("Erreur de dispatcher : " + err)
         dispatcher.destroy()
         connection.disconnect()
     })
