@@ -21,7 +21,7 @@ module.exports = {
         .setTimestamp()
         .setThumbnail('https://cdn.discordapp.com/attachments/738864387019767921/821457688172167198/Hnet.com-image.gif'))
         const reason = args.slice(1).join(' ') || 'Aucune raison fournie.'
-        const muteRole = message.guild.roles.cache.find(role => role.name === '「🔇」Muted')
+        const muteRole = message.guild.roles.cache.find(role => role.name === 'Muted')
         if (!muteRole) return message.channel.send(new Discord.MessageEmbed()
         .setDescription('Il n\'y a pas de muteRole ! Je ne peux donc pas unmute cette personne.')
         .setColor('#ff0000')

@@ -34,11 +34,11 @@ module.exports = {
         .setTimestamp()
         .setThumbnail('https://cdn.discordapp.com/attachments/738864387019767921/821457688172167198/Hnet.com-image.gif'))
         const reason = args.slice(2).join(' ') || 'Aucune raison fournie.'
-        let muteRole = message.guild.roles.cache.find(role => role.name === '「🔇」Muted')
+        let muteRole = message.guild.roles.cache.find(role => role.name === 'Muted')
         if (!muteRole) {
             muteRole = await message.guild.roles.create({
                 data: {
-                    name: '「🔇」Muted',
+                    name: 'Muted',
                     permissions: 0
                 }
             })

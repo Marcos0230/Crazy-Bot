@@ -114,7 +114,7 @@ client.on('ready', () => {
 
 client.on('channelCreate', channel => {
     if (!channel.guild) return
-    const muteRole = channel.guild.roles.cache.find(role => role.name === '「🔇」Muted')
+    const muteRole = channel.guild.roles.cache.find(role => role.name === 'Muted')
     if (!muteRole) return
     channel.createOverwrite(muteRole, {
         SEND_MESSAGES: false,
