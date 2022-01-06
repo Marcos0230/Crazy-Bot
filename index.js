@@ -1,4 +1,4 @@
-const Discord = require('discord.js'), // Déclaration de toutes les constantes nécessaires au fonctionnement du bot et du fichier lui-même
+const Discord = require('discord.js'), //Déclaration de toutes les constantes nécessaires au fonctionnement du bot et du fichier lui-même
     client = new Discord.Client({
         partials: ['MESSAGE', 'REACTION'],
         fetchAllMembers: true
