@@ -3,3 +3,4 @@ token.json
 config.json
 db.json
 /commands/musicClear.js
+/commands/musicLeave.js
