@@ -7,7 +7,8 @@ const Discord = require('discord.js'), //Déclaration de toutes les constantes n
     token = require('./token.json'),
     fs = require('fs'),
     humanizeDuration = require('humanize-duration'),
-    got = require('got')
+    got = require('got'),
+    dispatcher = require('./commands/musicPlay')
 
 client.login(token.token) //Le bot se connecte via le token (stocké dans un fichier séparé)
 client.commands = new Discord.Collection() //On crée une nouvelle collection où l'on peut stocker les commandes
