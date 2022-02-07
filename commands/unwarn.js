@@ -28,6 +28,12 @@ module.exports = {
         const { reason } = client.db.warns[member.id].splice(warnIndex, 1)[0]
         if (!client.db.warns[member.id].length) delete client.db.warns[member.id]
         fs.writeFileSync('./db.json', JSON.stringify(client.db))
+        message.mentions.members.first().send(new Discord.MessageEmbed()
+        .setAuthor(`[UNWARN] sur le serveur ${message.guild.name}`, message.guild.iconURL())
+        .addField('Par le Modérateur', message.author, true)
+        .addField('La Raison était', reason, true)
+        .setColor('#00ff00')
+        .setTimestamp())
         message.channel.send(new Discord.MessageEmbed()
         .setDescription(`${member} a été unwarn ! La raison du warn était \"${reason}\".`)
         .setColor('#ff0000')

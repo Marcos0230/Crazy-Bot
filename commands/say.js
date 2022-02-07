@@ -1,8 +1,9 @@
+const Discord = require('discord.js')
 const config = require('../config.json')
  
 module.exports = {
     run: (message, args) => {
-        if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(new Discord.MessageEmbed()
+        if (message.author.id !== ('588381876989853697') || message.author.id !== ('557500561277059073')) return message.channel.send(new Discord.MessageEmbed()
         .setDescription('Vous n\'avez pas la permission d\'utiliser cette commande !')
         .setColor('#ff0000')
         .setTimestamp()

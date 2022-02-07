@@ -34,6 +34,12 @@ module.exports = {
             mod: message.author.id
         })
         fs.writeFileSync('./db.json', JSON.stringify(client.db))
+        message.mentions.members.first().send(new Discord.MessageEmbed()
+        .setAuthor(`[WARN] sur le serveur ${message.guild.name}`, message.guild.iconURL())
+        .addField('Par le Modérateur', message.author, true)
+        .addField('Pour la Raison', reason, true)
+        .setColor('#ff0000')
+        .setTimestamp())
         message.channel.send(new Discord.MessageEmbed()
         .setDescription(`${member} a été warn pour la raison \"${reason}\" !`)
         .setColor('#00ff00')
