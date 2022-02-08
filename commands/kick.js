@@ -26,6 +26,12 @@ module.exports = {
         .setTimestamp()
         .setThumbnail('https://cdn.discordapp.com/attachments/738864387019767921/821457688172167198/Hnet.com-image.gif'))
         const reason = args.slice(1).join(' ') || 'Aucune raison fournie'
+        await message.mentions.members.first().send(new Discord.MessageEmbed()
+        .setAuthor(`[KICK] sur le serveur ${message.guild.name}`, message.guild.iconURL())
+        .addField('Par le Modérateur', message.author, true)
+        .addField('Pour la Raison', reason, true)
+        .setColor('#ff0000')
+        .setTimestamp())
         await member.kick(reason)
         message.channel.send(new Discord.MessageEmbed()
             .setDescription(`${member.user.tag} a été exclu(e)`)
