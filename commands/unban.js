@@ -3,7 +3,7 @@ const Discord = require('discord.js'),
 
 module.exports = {
     run: async (message, args) => {
-        if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(new Discord.MessageEmbed()
+        /*if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(new Discord.MessageEmbed()
         .setDescription('Vous n\'avez pas la permission d\'utiliser cette commande !')
         .setColor('#ff0000')
         .setTimestamp()
@@ -33,7 +33,8 @@ module.exports = {
             .addField('Utilisateur', member, true)
             .addField('Raison', reason, true)
             .setColor('#00ff00')
-            .setTimestamp())
+            .setTimestamp())*/
+        message.channel.send("Commande en développement")
     },
     name: 'unban',
     guildOnly: true,
