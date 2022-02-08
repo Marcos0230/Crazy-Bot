@@ -88,6 +88,7 @@ client.on('message', message => {
 client.on('guildMemberAdd', member => {
     member.guild.channels.cache.get(config.greeting.channel).send(`${member}`, new Discord.MessageEmbed()
         .setDescription(`${member} a rejoint le serveur. Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
+        .setThumbnail(member.user.displayAvatarURL())
         .setTimestamp()
         .setColor('#00ff00'))
     member.roles.add(config.greeting.role)
@@ -96,6 +97,7 @@ client.on('guildMemberAdd', member => {
 client.on('guildMemberRemove', member => {
     member.guild.channels.cache.get(config.goodbye).send(new Discord.MessageEmbed()
         .setDescription(`${member.user.tag} a quitté le serveur... 😢`)
+        .setThumbnail(member.user.displayAvatarURL())
         .setTimestamp()
         .setColor('#ff0000'))
 }) //Message d'au revoir
