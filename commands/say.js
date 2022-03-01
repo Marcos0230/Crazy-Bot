@@ -3,7 +3,7 @@ const config = require('../config.json')
  
 module.exports = {
     run: (message, args) => {
-        if (message.author.id !== ('588381876989853697') || message.author.id !== ('557500561277059073')) return message.channel.send(new Discord.MessageEmbed()
+        if (!message.author.id === ('588381876989853697') || !message.author.id === ('557500561277059073')) return message.channel.send(new Discord.MessageEmbed()
         .setDescription('Vous n\'avez pas la permission d\'utiliser cette commande !')
         .setColor('#ff0000')
         .setTimestamp()
@@ -14,7 +14,7 @@ module.exports = {
         .setTimestamp()
         .setThumbnail('https://cdn.discordapp.com/attachments/738864387019767921/821457688172167198/Hnet.com-image.gif'))
         message.delete()
-        message.channel.send(message.content.trim().slice(`${config.prefix}say`.length))
+        message.channel.send(message.content.trim().slice(`${config.prefix}say`.length) + ` ||*[message envoyé par ${message.author.tag}]*||`)
     },
     name: 'say',
     guildOnly: true,
