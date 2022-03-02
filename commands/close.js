@@ -8,7 +8,7 @@ module.exports = {
             .setColor('#ff0000')
             .setDescription('**Ce salon n\'est pas un ticket.**')
             .setTimestamp()
-            .setThumbnail('https://cdn.discordapp.com/attachments/738864387019767921/821457688172167198/Hnet.com-image.gif'))
+            .setThumbnail(config.gif))
         if (!message.member.hasPermission('MANAGE_MESSAGES') && client.db.tickets[channel.id].author !== message.author.id) return message.channel.send('Vous n\'avez pas la permission de fermer ce ticket.')
         delete client.db.tickets[channel.id]
         fs.writeFileSync('./db.json', JSON.stringify(client.db))

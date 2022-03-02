@@ -19,7 +19,7 @@ module.exports = {
             if (!command || !command.help) return message.channel.send(new Discord.MessageEmbed()
                 .setDescription('Cette commande n\'existe pas.')
                 .setColor('#ff0000')
-                .setThumbnail('https://cdn.discordapp.com/attachments/738864387019767921/821457688172167198/Hnet.com-image.gif'))
+                .setThumbnail(config.gif))
             message.channel.send(new Discord.MessageEmbed()
                 .setTitle(`Commande : ${command.name}`)
                 .setDescription(`__Catégorie :__ ${command.help.category}\n\n${command.help.description}\n\n__Syntaxe :__ \`${config.prefix}${command.name}${command.help.syntax ? ` ${command.help.syntax}` : ''}\``)

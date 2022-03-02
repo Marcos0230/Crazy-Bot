@@ -8,7 +8,7 @@ module.exports = {
             .setColor('#ff0000')
             .setDescription('**Vous avez déjà un ticket ouvert !**')
             .setTimestamp()
-            .setThumbnail('https://cdn.discordapp.com/attachments/738864387019767921/821457688172167198/Hnet.com-image.gif'))
+            .setThumbnail(config.gif))
         const channel = await message.guild.channels.create(`ticket ${message.author.username}`, {
             type: 'text',
             parent: config.ticket.category,
