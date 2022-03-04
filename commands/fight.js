@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const config = require('../config.json')
 const nombre = ["1", "2", "3", "4"]
 
 module.exports = {
@@ -8,7 +9,8 @@ module.exports = {
         if (!member) return message.channel.send(new Discord.MessageEmbed()
             .setDescription('Veuillez mentionner le membre avec qui vous voulez vous battre.')
             .setColor('#ff0000')
-            .setTimestamp())
+            .setTimestamp()
+            .setThumbnail(config.gif))
         if (résultat === "2") return message.channel.send(new Discord.MessageEmbed()
             .setTitle(`${message.author.username} se bats contre quelqu\'un :`)
             .setDescription(`<@${message.author.id}> assène un puissant coup de poing à ${member}, ce qui le mets KO.\n\n<@${message.author.id}> a gagné !`)

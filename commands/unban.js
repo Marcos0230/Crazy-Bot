@@ -7,12 +7,14 @@ module.exports = {
         .setDescription('Vous n\'avez pas la permission d\'utiliser cette commande !')
         .setColor('#ff0000')
         .setTimestamp()
+            .setThumbnail(config.gif)
         .setThumbnail(config.gif))
         const member = args[0]
         if (!member) return message.channel.send(new Discord.MessageEmbed()
         .setDescription('Veuillez donner l\'id de l\'utilisateur à unban.')
         .setColor('#ff0000')
         .setTimestamp()
+            .setThumbnail(config.gif)
         .setThumbnail(config.gif))
         if (message.author.roles.highest.comparePositionTo(member.roles.highest) < 1 && message.author.id !== message.guild.ownerID) return message.channel.send('Vous ne pouvez pas unban ce membre.')
         const reason = args.slice(2).join(' ') || 'Aucune raison fournie'
