@@ -55,7 +55,7 @@ module.exports = {
                         case "Autre":
                             autreTable.push(command);
                             break;
-                    };
+                    }
                 });
 
                 message.channel.send(new Discord.MessageEmbed()
@@ -75,7 +75,7 @@ module.exports = {
                     .setFooter('Pour + d\'infos sur une commande, faites c.help <commande>')
                     .setTimestamp()).then(() => { msg.delete() });
             });
-        };
+        }
     },
     name: 'help',
     help: {
