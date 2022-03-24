@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const got = require('got');
 
 module.exports = {
-	run: async (message, args) => {
+	run: async (message) => {
 		const embed = new Discord.MessageEmbed();
 		got('https://www.reddit.com/r/rance/random/.json')
 			.then(response => {
