@@ -81,7 +81,7 @@ client.on('message', message => {
     const command = client.commands.get(commandName.slice(config.prefix.length))
     if (!command) return
     if (command.guildOnly && !message.guild) return message.channel.send('Cette commande ne peut être utilisée que dans un serveur.')
-    command.run(message, args, client)
+    command.run(message, client)
 })
 
 client.on('guildMemberAdd', member => {
