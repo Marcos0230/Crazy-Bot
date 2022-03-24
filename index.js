@@ -1,3 +1,5 @@
+require('humanize-duration');
+require('got');
 const Discord = require('discord.js'),
     client = new Discord.Client({
         partials: ['MESSAGE', 'REACTION'],
@@ -5,10 +7,7 @@ const Discord = require('discord.js'),
     }),
     config = require('./config.json'),
     token = require('./token.json'),
-    fs = require('fs'),
-    humanizeDuration = require('humanize-duration'),
-    got = require('got'),
-    db = require('./db.json')
+    fs = require('fs')
 
 client.login(token.token)
 client.commands = new Discord.Collection()
@@ -31,7 +30,7 @@ client.on('message', message => {
     if (message.content.includes(token.token)) {
         message.delete()
         console.log('Le token a été envoyé sur Discord, la sécurité du bot est compromise : régénère le token du bot au plus vite !');
-    };
+    }
 
     if (message.type !== 'DEFAULT' || message.author.bot) return
 
