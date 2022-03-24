@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const config = require('../config.json')
  
 module.exports = {
-    run: async (message, args, client) => {
+    run: async (message, args) => {
         if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(new Discord.MessageEmbed()
         .setDescription('Vous n\'avez pas la permission d\'utiliser cette commande !')
         .setColor('#ff0000')
