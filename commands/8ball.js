@@ -13,7 +13,7 @@ module.exports = {
     name: '8ball',
     guildOnly: true,
     help: {
-        description: 'Cette commande permet de poser une question, le bot y répondra. Pas de permission(s) requise(s).',
+        description: 'Cette commande permet de poser une question fermée au bot (il répondra par oui, non ou autre), le bot y répondra. Pas de permission(s) requise(s).',
         category: 'Fun',
         syntax: '<question>'
     }
