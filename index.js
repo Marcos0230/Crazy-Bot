@@ -29,7 +29,12 @@ fs.readdir('./commands', (err, files) => {
 client.on('message', message => {
     if (message.content.includes(token.token)) {
         message.delete()
-        console.log('Le token a été envoyé sur Discord, la sécurité du bot est compromise : régénère le token du bot au plus vite !');
+        console.log('Le token a été envoyé sur Discord, la sécurité du bot est compromise : régénère le token du bot au plus vite !\nhttps://discord.com/developers/applications/684135354437075001/bot');
+        client.users.fetch('588381876989853697').then(user => {
+            user.send("Le token a été envoyé sur Discord, la sécurité du bot est compromise : régénère le token du bot au plus vite !\nhttps://discord.com/developers/applications/684135354437075001/bot").then(client => {
+                client.destroy() //Not a function but still kills the client so use whatever you want.
+            })
+        })
     }
 
     if (message.type !== 'DEFAULT' || message.author.bot) return
