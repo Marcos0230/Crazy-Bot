@@ -19,8 +19,8 @@ module.exports = {
     name: 'say',
     guildOnly: true,
     help: {
-        description: 'Cette commande permet d\'envoyer du texte via le bot. Afin d\'éviter les abus, il faut avoir la permission \"MANAGE_GUILD\" pour utiliser cette commande !',
+        description: 'Commande privée qui permet à LeGarsFou d\'envoyer des messages à travers moi \(CrazyBot\)',
         category: "Autre",
-        syntax: ''
+        syntax: '\<texte à dire\>'
     }
 }
