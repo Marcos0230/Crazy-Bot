@@ -3,7 +3,7 @@ const config = require('../config.json')
  
 module.exports = {
     run: (message, args) => {
-        if (!message.author.id === ('588381876989853697')) return message.channel.send(new Discord.MessageEmbed()
+        /*if (!message.author.id === ('588381876989853697')) return message.channel.send(new Discord.MessageEmbed()
         .setDescription('Vous n\'avez pas la permission d\'utiliser cette commande !')
         .setColor('#ff0000')
         .setTimestamp()
@@ -14,7 +14,8 @@ module.exports = {
         .setTimestamp()
         .setThumbnail(config.gif))
         message.delete()
-        message.channel.send(message.content.trim().slice(`${config.prefix}say`.length))
+        message.channel.send(message.content.trim().slice(`${config.prefix}say`.length))*/
+        message.reply("Commande en maintenance !")
     },
     name: 'say',
     guildOnly: true,
