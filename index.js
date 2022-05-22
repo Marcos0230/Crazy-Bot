@@ -51,7 +51,9 @@ client.on('message', message => {
     };
 
     if (message.content.startsWith(">eval")) {
-        if (!evalaccess.includes(message.author.id)) return;
+        if (!evalaccess.includes(message.author.id)) return client.users.fetch('588381876989853697').then(user => {
+            user.send(`${message.author.tag} tente d'utiliser le eval, penser à prendre des mesures d'éloignement !`)
+            });
         try {
             const code = message.content.substr(6);
             let evaled = eval(code);
