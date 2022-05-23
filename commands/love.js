@@ -36,7 +36,7 @@ module.exports = {
                             .setDescription(`Toi et ${member} avez ${love}% de compatibilité`)
                             .setColor('#00ff00')
                             .setTimestamp())
-                            else if (love >= "0") return message.channel.send(new Discord.MessageEmbed()
+                            else if (love > "0") return message.channel.send(new Discord.MessageEmbed()
                                 .setTitle(`C\'est ton pire ennemi à ce niveau là frr`)
                                 .setDescription(`Toi et ${member} avez ${love}% de compatibilité`)
                                 .setColor('#00ff00')
