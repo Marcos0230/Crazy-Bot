@@ -7,6 +7,8 @@ const Discord = require('discord.js'),
     }),
     config = require('./config.json'),
     token = require('./token.json'),
+    prefix = require('./prefix.json'),
+    version = require('./version.json'),
     fs = require('fs')
 
 client.login(token.token)
@@ -72,19 +74,19 @@ client.on('message', message => {
 
     if (message.content.startsWith("<@684135354437075001>")) {
         message.channel.send(new Discord.MessageEmbed()
-            .setDescription("Bonjour 👋 ! Je suis <@684135354437075001>, un bot multifonction crée et développé par " + config.ownerUsername + ".\n__**Prefix :**__ \`" + config.prefix + "\`")
+            .setDescription("Bonjour 👋 ! Je suis <@684135354437075001>, un bot multifonction crée et développé par " + config.ownerUsername + ".\n__**Prefix :**__ \`" + prefix.prefix + "\`")
             .setFooter('Faites c.help pour plus d\'infos'))
     }
 
     if (message.content.startsWith("<@!684135354437075001>")) {
         message.channel.send(new Discord.MessageEmbed()
-            .setDescription("Bonjour 👋 ! Je suis <@684135354437075001>, un bot multifonction crée et développé par " + config.ownerUsername + ".\n__**Prefix :**__ \`" + config.prefix + "\`")
+            .setDescription("Bonjour 👋 ! Je suis <@684135354437075001>, un bot multifonction crée et développé par " + config.ownerUsername + ".\n__**Prefix :**__ \`" + prefix.prefix + "\`")
             .setFooter('Faites c.help pour plus d\'infos'))
     }
 
     const args = message.content.trim().split(/ +/g)
     const commandName = args.shift().toLowerCase()
-    if (!commandName.startsWith(config.prefix)) return
+    if (!commandName.startsWith(prefix.prefix)) return
     const command = client.commands.get(commandName.slice(config.prefix.length))
     if (!command) return
     if (command.guildOnly && !message.guild) return message.channel.send('Cette commande ne peut être utilisée que dans un serveur.')
@@ -111,8 +113,8 @@ client.on('guildMemberRemove', member => {
 client.on('ready', () => {
     const statuses = [
         'son développeur ' + config.ownerUsername,
-        'son prefix : ' + config.prefix,
-        'sa version : ' + config.version
+        'son prefix : ' + prefix.prefix,
+        'sa version : ' + version.version
     ]
     let i = 0
     setInterval(() => {
