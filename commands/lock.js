@@ -31,7 +31,7 @@ module.exports = {
             .setAuthor(`[LOCK] ${channel.name}`)
             .addField('Salon', channel, true)
             .addField('Modérateur', message.author, true)
-            .setColor('#00ff00')
+            .setColor('#ff0000')
             .setTimestamp())
     },
     name: 'lock',
