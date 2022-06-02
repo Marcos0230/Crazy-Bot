@@ -1,5 +1,6 @@
 const Discord = require('discord.js'),
-    config = require('../config.json')
+    config = require('../config.json'),
+    prefix = require('../prefix.json')
 
 module.exports = {
     run: (message, args, client) => {
@@ -22,7 +23,7 @@ module.exports = {
                 .setThumbnail(config.gif))
             message.channel.send(new Discord.MessageEmbed()
                 .setTitle(`Commande : ${command.name}`)
-                .setDescription(`__Catégorie :__ ${command.help.category}\n\n${command.help.description}\n\n__Syntaxe :__ \`${config.prefix}${command.name}${command.help.syntax ? ` ${command.help.syntax}` : ''}\``)
+                .setDescription(`__Catégorie :__ ${command.help.category}\n\n${command.help.description}\n\n__Syntaxe :__ \`${prefix.prefix}${command.name}${command.help.syntax ? ` ${command.help.syntax}` : ''}\``)
                 .setTimestamp())
         }
         else {
@@ -61,17 +62,17 @@ module.exports = {
                 message.channel.send(new Discord.MessageEmbed()
                     .setTitle('Liste des commandes')
                     .setDescription(`➡️ **__FUN__ :**\n
-                    ${funTable.map(command => `\`${config.prefix}${command.name}\``).join(", ")}
+                    ${funTable.map(command => `\`${prefix.prefix}${command.name}\``).join(", ")}
                     \n\n ➡️** __UTILITAIRE__ :**\n
-                    ${utilitaireTable.map(command => `\`${config.prefix}${command.name}\``).join(", ")}
+                    ${utilitaireTable.map(command => `\`${prefix.prefix}${command.name}\``).join(", ")}
                     \n\n ➡️** __MUSIQUE__ :**\n
-                    ${musiqueTable.map(command => `\`${config.prefix}${command.name}\``).join(", ")}
+                    ${musiqueTable.map(command => `\`${prefix.prefix}${command.name}\``).join(", ")}
                     \n\n ➡️** __TICKET__ :**\n
-                    ${ticketTable.map(command => `\`${config.prefix}${command.name}\``).join(", ")}
+                    ${ticketTable.map(command => `\`${prefix.prefix}${command.name}\``).join(", ")}
                     \n\n ➡️** __MODÉRATION__ :**\n
-                    ${moderatorTable.map(command => `\`${config.prefix}${command.name}\``).join(", ")}
+                    ${moderatorTable.map(command => `\`${prefix.prefix}${command.name}\``).join(", ")}
                     \n\n ➡️** __AUTRE__ :**\n
-                    ${autreTable.map(command => `\`${config.prefix}${command.name}\``).join(", ")} `)
+                    ${autreTable.map(command => `\`${prefix.prefix}${command.name}\``).join(", ")} `)
                     .setFooter('Pour + d\'infos sur une commande, faites c.help <commande>')
                     .setTimestamp()).then(() => { msg.delete() });
             });
