@@ -1,5 +1,6 @@
-const moment = require('moment'),
-    Discord = require('discord.js')
+const Discord = require('discord.js')
+const moment = require('moment')
+const config = require('../config.json')
  
 moment.locale('fr')
  
