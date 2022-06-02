@@ -17,7 +17,7 @@ module.exports = {
             .setColor('#ff0000')
             .setTimestamp()
             .setThumbnail(config.gif))
-        message.channel.send(new Discord.MessageEmbed()
+        await message.channel.send(new Discord.MessageEmbed()
             .setDescription(`**Total de warns :** ${client.db.warns[member.id].length}\n\n__**10 derniers warns**__\n\n${client.db.warns[member.id].slice(0, 10).map((warn, i) => `**${i + 1}.** ${warn.reason}\nSanctionné ${moment(warn.date).fromNow()} par <@!${warn.mod}>`).join('\n\n')}`)
             .setColor('#ffff00')
             .setTimestamp())
