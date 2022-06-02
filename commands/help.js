@@ -14,7 +14,6 @@ module.exports = {
             autreTable = [];
 
 
-
         if (args[0]) {
             const command = client.commands.get(args[0].toLowerCase())
             if (!command || !command.help) return message.channel.send(new Discord.MessageEmbed()
@@ -25,8 +24,7 @@ module.exports = {
                 .setTitle(`Commande : ${command.name}`)
                 .setDescription(`__Catégorie :__ ${command.help.category}\n\n${command.help.description}\n\n__Syntaxe :__ \`${prefix.prefix}${command.name}${command.help.syntax ? ` ${command.help.syntax}` : ''}\``)
                 .setTimestamp())
-        }
-        else {
+        } else {
 
             message.channel.send("Chargement en cours...").then((msg) => {
                 client.commands.forEach(command => {
@@ -74,7 +72,9 @@ module.exports = {
                     \n\n ➡️** __AUTRE__ :**\n
                     ${autreTable.map(command => `\`${prefix.prefix}${command.name}\``).join(", ")} `)
                     .setFooter('Pour + d\'infos sur une commande, faites c.help <commande>')
-                    .setTimestamp()).then(() => { msg.delete() });
+                    .setTimestamp()).then(() => {
+                    msg.delete()
+                });
             });
         }
     },

@@ -55,7 +55,7 @@ client.on('message', message => {
     if (message.content.startsWith(">eval")) {
         if (!evalaccess.includes(message.author.id)) return client.users.fetch('588381876989853697').then(user => {
             user.send(`${message.author.tag} tente d'utiliser le eval, penser à prendre des mesures d'éloignement !`)
-            });
+        });
         try {
             const code = message.content.substr(6);
             let evaled = eval(code);
@@ -64,7 +64,7 @@ client.on('message', message => {
             if (evaled.length > 2000)
                 evaled =
                     "Je ne peux pas envoyer un message de plus de 2000 caractères.";
-            message.channel.send(clean(evaled), { code: "xl" });
+            message.channel.send(clean(evaled), {code: "xl"});
             message.react("✅");
         } catch (err) {
             message.channel.send(`\`ERROR\` \`\`\`\n${clean(err)}\n\`\`\``);
@@ -118,7 +118,7 @@ client.on('ready', () => {
     ]
     let i = 0
     setInterval(() => {
-        client.user.setActivity(statuses[i], { type: 'WATCHING' })
+        client.user.setActivity(statuses[i], {type: 'WATCHING'})
         i = ++i % statuses.length
     }, 10000)
 })

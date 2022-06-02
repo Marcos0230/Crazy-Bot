@@ -30,10 +30,10 @@ module.exports = {
                 .setColor('#00ff00')
                 .setTimestamp())
         else message.channel.send(new Discord.MessageEmbed()
-            .setTitle('Perdu')
-            .setDescription('Vous avez perdu, quel dommage...')
-            .setColor('#ff0000')
-            .setTimestamp())
+                .setTitle('Perdu')
+                .setDescription('Vous avez perdu, quel dommage...')
+                .setColor('#ff0000')
+                .setTimestamp())
     },
     name: 'arjent',
     guildOnly: true,

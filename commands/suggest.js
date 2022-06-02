@@ -19,9 +19,9 @@ module.exports = {
             .setDescription(`${suggestion}`)
             .setFooter(`ID : ${message.author.id}`)
             .setTimestamp()).then(message => {
-                message.react("✅")
-                message.react("❌")
-            })
+            message.react("✅")
+            message.react("❌")
+        })
     },
     name: 'suggest',
     guildOnly: true,

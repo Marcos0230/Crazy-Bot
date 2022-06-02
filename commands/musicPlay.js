@@ -5,18 +5,16 @@ var list = []
 
 module.exports = {
     run: async (message) => {
-        if(message.member.voice.channel){
+        if (message.member.voice.channel) {
             let args = message.content.split(" ")
 
-            if(args[1] === undefined || !args[1].startsWith("https://www.youtube.com/watch?v=")){
+            if (args[1] === undefined || !args[1].startsWith("https://www.youtube.com/watch?v=")) {
                 message.reply("Lien invalide ou mal fourni.")
-            }
-            else {
-                if(list.length > 0){
+            } else {
+                if (list.length > 0) {
                     list.push(args[1])
                     message.reply("Vidéo ajoutée à la liste d'attente !")
-                }
-                else {
+                } else {
                     list.push(args[1])
                     message.reply("Vidéo ajoutée à la liste d'attente !")
 
@@ -44,17 +42,16 @@ module.exports = {
     }
 }
 
-function playMusic(connection){
-    let dispatcher = connection.play(ytdl(list[0], { quality: "highestaudio"}))
+function playMusic(connection) {
+    let dispatcher = connection.play(ytdl(list[0], {quality: "highestaudio"}))
 
     dispatcher.on("finish", () => {
         list.shift()
         dispatcher.destroy()
 
-        if(list.length > 0){
+        if (list.length > 0) {
             playMusic(connection)
-        }
-        else {
+        } else {
             connection.disconnect()
         }
     })

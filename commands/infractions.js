@@ -1,17 +1,17 @@
 const Discord = require('discord.js')
 const moment = require('moment')
 const config = require('../config.json')
- 
+
 moment.locale('fr')
- 
+
 module.exports = {
     run: async (message, args, client) => {
         const member = message.mentions.members.first()
         if (!member) return message.channel.send(new Discord.MessageEmbed()
-        .setDescription('Veuillez mentionner le membre dont vous voulez voir les warns')
-        .setColor('#ff0000')
-        .setTimestamp()
-        .setThumbnail(config.gif))
+            .setDescription('Veuillez mentionner le membre dont vous voulez voir les warns')
+            .setColor('#ff0000')
+            .setTimestamp()
+            .setThumbnail(config.gif))
         if (!client.db.warns[member.id]) return message.channel.send(new Discord.MessageEmbed()
             .setDescription('Ce membre n\'a aucun warn')
             .setColor('#ff0000')

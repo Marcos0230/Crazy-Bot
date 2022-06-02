@@ -1,7 +1,10 @@
 require('discord.js');
 module.exports = {
     run: async (message) => {
-        var start=Date.now();message.channel.send("Pinging...").then(m=>{m.edit("🏓 Pong : "+(Date.now()-start)+"ms")})
+        var start = Date.now();
+        message.channel.send("Pinging...").then(m => {
+            m.edit("🏓 Pong : " + (Date.now() - start) + "ms")
+        })
     },
     name: 'ping',
     help: {

@@ -1,6 +1,6 @@
 const Discord = require('discord.js'),
     moment = require('moment')
- 
+
 module.exports = {
     run: (message, args, client) => {
         const member = message.mentions.members.first() || message.member

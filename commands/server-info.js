@@ -1,6 +1,6 @@
 const Discord = require('discord.js'),
     moment = require('moment')
- 
+
 module.exports = {
     run: message => {
         message.channel.send(new Discord.MessageEmbed()
