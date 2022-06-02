@@ -87,7 +87,7 @@ client.on('message', message => {
     const args = message.content.trim().split(/ +/g)
     const commandName = args.shift().toLowerCase()
     if (!commandName.startsWith(prefix.prefix)) return
-    const command = client.commands.get(commandName.slice(config.prefix.length))
+    const command = client.commands.get(commandName.slice(prefix.prefix.length))
     if (!command) return
     if (command.guildOnly && !message.guild) return message.channel.send('Cette commande ne peut être utilisée que dans un serveur.')
     command.run(message, args, client)
