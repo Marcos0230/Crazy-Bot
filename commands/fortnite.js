@@ -27,7 +27,7 @@ module.exports = {
     name: 'fortnite',
     guildOnly: true,
     help: {
-        description: 'Pour pimenter tes games Fortnite',
+        description: 'Pour pimenter tes games Fortnite. Merci à <@415148210156470272> pour l\'idée !',
         category: "Fun",
         syntax: ''
     }
