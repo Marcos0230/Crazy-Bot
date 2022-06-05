@@ -1,9 +1,11 @@
-require('discord.js');
 module.exports = {
-    run: async (message) => {
-        var start = Date.now();
-        message.channel.send("Pinging...").then(m => {
-            m.edit("🏓 Pong : " + (Date.now() - start) + "ms")
+    run: async (message, client) => {
+        const startTime = Date.now()
+
+        await message.channel.send(`Ping en cours...`).then(async msg => {
+            const endTime = Date.now()
+
+            await msg.edit(`Pong! 🏓\nLatence du bot : ${endTime - startTime}ms`)
         })
     },
     name: 'ping',
