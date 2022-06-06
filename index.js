@@ -10,6 +10,9 @@ const Discord = require('discord.js'),
     prefix = require('./prefix.json'),
     version = require('./version.json'),
     fs = require('fs')
+const moment = require("moment")
+const startTime = Date.now()
+require("moment-duration-format")
 
 client.login(token.token)
 client.commands = new Discord.Collection()
@@ -111,10 +114,12 @@ client.on('guildMemberRemove', member => {
 })
 
 client.on('ready', () => {
+    const uptime = Date.now() - startTime
     const statuses = [
         'son développeur ' + config.ownerUsername,
         'son prefix : ' + prefix.prefix,
-        'sa version : ' + version.version
+        'sa version : ' + version.version,
+        'online depuis : ' + moment.duration(uptime).format(" D [days], H [hrs], m [mins], s [secs]")
     ]
     let i = 0
     setInterval(() => {
