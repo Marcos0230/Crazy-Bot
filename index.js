@@ -114,12 +114,10 @@ client.on('guildMemberRemove', member => {
 })
 
 client.on('ready', () => {
-    const uptime = Date.now() - startTime
     const statuses = [
         'son développeur ' + config.ownerUsername,
         'son prefix : ' + prefix.prefix,
-        'sa version : ' + version.version,
-        'online depuis : ' + moment.duration(uptime).format(" D [days], H [hrs], m [mins], s [secs]")
+        'sa version : ' + version.version
     ]
     let i = 0
     setInterval(() => {
