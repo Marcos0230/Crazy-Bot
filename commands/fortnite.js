@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const city = ["Coney Crossroads", "Shifty Shafts", "Tilted Towers", "Condo Canyon"]
+const city = ["Coney Crossroads", "Shifty Shafts", "Tilted Towers", "Condo Canyon", "La Bamboche", "Logjam Lumberyard", "Sleepy Sound", "Daily Bugle", "Sanctuaire", "Bourg-Jonesy", "Circuit Chonkers", "Synapse Station", "Rocky Reels", "Greasy Grove", "Cascades De Réalité"]
 const rarity = ["Commune (grise)", "Peu commune (verte)", "Rare (bleue)", "Épique (violette)", "Légendaire (dorée)"]
 const weapon = ["Fusil d\'assaut", "Pompe", "Snipe", "SMG/LMG/Minigun", "Lance roquettes/Lance grenades"]
 
