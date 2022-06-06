@@ -1,6 +1,6 @@
 {
-  "name": "Crazy-Bot",
-  "version": "1.2.1",
+  "name": "crazy-bot",
+  "version": "1.2.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.4.1",
-    "ffmpeg-static": "^3.0.0",
+    "ffmpeg-static": "^5.0.0",
     "got": "^11.8.2",
     "humanize-duration": "^3.24.0",
     "moment": "^2.29.1",
