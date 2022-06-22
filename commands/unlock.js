@@ -19,9 +19,9 @@ module.exports = {
         fs.writeFileSync('./db.json', JSON.stringify(client.db))
         const memberRole = channel.guild.roles.cache.find(role => role.name === 'ᘻЄᘻβƦЄ')
         channel.createOverwrite(memberRole, {
-            SEND_MESSAGES: true,
-            CONNECT: true,
-            ADD_REACTIONS: true
+            SEND_MESSAGES: null,
+            CONNECT: null,
+            ADD_REACTIONS: null
         })
         message.channel.send(new Discord.MessageEmbed()
             .setDescription('**Le salon a été déverrouillé !**')
