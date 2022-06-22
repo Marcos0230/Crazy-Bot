@@ -20,7 +20,7 @@ module.exports = {
             .setTimestamp()
             .setThumbnail('`https://media.discordapp.net/attachments/909742401210433536/988910223790075934/antoine-daniel-wtc.gif`'))
         if (message.member.roles.highest.comparePositionTo(member.roles.highest) < 1 && message.author.id !== message.guild.ownerID) return message.channel.send(new Discord.MessageEmbed()
-            .setDescription('Je ne pas warn ce membre !')
+            .setDescription('Votre rôle n\'est pas assez haut pour warn ce membre')
             .setColor('#ff0000')
             .setTimestamp()
             .setThumbnail(config.gif))
