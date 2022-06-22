@@ -42,7 +42,7 @@ module.exports = {
             .setAuthor(`[WARN] sur le serveur ${message.guild.name}`, message.guild.iconURL())
             .addField('Par le Modérateur', message.author, true)
             .addField('Pour la Raison', reason, true)
-            .setColor('#00ff00')
+            .setColor('#ff0000')
             .setTimestamp())
         message.channel.send(new Discord.MessageEmbed()
             .setDescription(`${member} a été warn pour la raison \"${reason}\" !`)

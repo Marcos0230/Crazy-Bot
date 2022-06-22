@@ -39,7 +39,7 @@ module.exports = {
             .addField('Staff', member, true)
             .addField('Administrateur', message.author, true)
             .addField('Raison', reason, true)
-            .setColor('#00ff00')
+            .setColor('#ff0000')
             .setTimestamp())
     },
     name: 'warn-staff',

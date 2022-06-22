@@ -62,7 +62,7 @@ module.exports = {
             .addField('Modérateur', message.author, true)
             .addField('Raison', reason, true)
             .addField('Durée', '∞', true)
-            .setColor('#00ff00')
+            .setColor('#ff0000')
             .setTimestamp())
     },
     name: 'mute',
