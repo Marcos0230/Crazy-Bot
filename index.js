@@ -100,6 +100,7 @@ client.on('guildMemberAdd', member => {
     member.guild.channels.cache.get(config.greeting.channel).send(`${member}`, new Discord.MessageEmbed()
         .setDescription(`${member} a rejoint le serveur. Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
         .setThumbnail(member.user.displayAvatarURL())
+        .setImage('https://media.discordapp.net/attachments/909767627059109908/990962659161677866/DU_fun_et_de_lamusement_a_letat_pur.png')
         .setTimestamp()
         .setColor('#00ff00'))
     member.roles.add(config.greeting.role)
