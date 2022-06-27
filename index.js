@@ -103,7 +103,7 @@ client.on('guildMemberAdd', member => {
         .setImage('https://media.discordapp.net/attachments/909767627059109908/990962659161677866/DU_fun_et_de_lamusement_a_letat_pur.png')
         .setTimestamp()
         .setColor('#00ff00'))
-    member.roles.add(config.greeting.role)
+    // member.roles.add(config.greeting.role)
 })
 
 client.on('guildMemberRemove', member => {
